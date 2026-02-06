@@ -2,13 +2,17 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
+import { SmoothScrollProvider } from "./providers/smooth-scroll-provider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      <SmoothScrollProvider>
+        {children}
+      </SmoothScrollProvider>
     </QueryClientProvider>
   );
 }
+
