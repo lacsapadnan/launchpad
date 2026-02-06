@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // TODO: Implement Supabase Auth check
   // TODO: Implement Team slug validation
   // TODO: Implement Subscription gating (past_due > 3 days)
